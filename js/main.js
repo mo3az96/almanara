@@ -84,4 +84,14 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  /************************************ Password ************************************/
+  $(".toggle-pass").click(function () {
+    var input = $(this).siblings("input");
+    if (input.attr("type") === "password") {
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
+  });
 });
