@@ -2,6 +2,32 @@ $(window).on("load", function () {
   $("body").removeClass("overflow");
 });
 $(document).ready(function () {
+  /* ************************************ Fixed Header ************************************ */
+  if ($(this).scrollTop() >= 100) {
+    $("header").addClass("fixed");
+  } else {
+    $("header").removeClass("fixed");
+  }
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= 100) {
+      $("header").addClass("fixed");
+    } else {
+      $("header").removeClass("fixed");
+    }
+  });
+  /************************************ Menu ************************************/
+  if ($(window).width() <= 991) {
+    $(".menu-btn").click(function () {
+      $(".menu-overlay").fadeIn(500);
+      $(".header-navbar").addClass("active");
+      $("body").addClass("overflow");
+    });
+    $(".menu-close,.menu-overlay").click(function () {
+      $(".menu-overlay").fadeOut(500);
+      $(".header-navbar").removeClass("active");
+      $("body").removeClass("overflow");
+    });
+  }
   /************************************ Main Slider ************************************/
   var mainSwiper = new Swiper(".main-slider .swiper", {
     a11y: {
