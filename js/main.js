@@ -18,14 +18,20 @@ $(document).ready(function () {
   /************************************ Menu ************************************/
   if ($(window).width() <= 991) {
     $(".menu-btn").click(function () {
-      $(".menu-overlay").fadeIn(500);
+      $(".menu-overlay").addClass("active").fadeIn(500);
       $(".header-navbar").addClass("active");
       $("body").addClass("overflow");
     });
     $(".menu-close,.menu-overlay").click(function () {
-      $(".menu-overlay").fadeOut(500);
+      $(".menu-overlay").fadeOut(500).removeClass("active");
       $(".header-navbar").removeClass("active");
+      $(".user-list").fadeOut(500);
       $("body").removeClass("overflow");
+    });
+
+    $(".user-btn").click(function () {
+      $(".user-list").fadeIn(500);
+      $(".menu-overlay").fadeIn(500);
     });
   }
   /************************************ Main Slider ************************************/
