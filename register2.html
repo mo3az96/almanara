@@ -312,8 +312,14 @@
                 </span>
               </div>
             </div>
-            <!-- <button class="form-submit main-btn">تسجيل حساب</button> -->
-            <a href="logged.html" class="form-submit main-btn">تسجيل حساب</a>
+            <button
+              class="form-submit main-btn"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#successModal"
+            >
+              تسجيل حساب
+            </button>
           </form>
         </div>
         <p class="extrnal-link">
@@ -322,6 +328,18 @@
       </div>
     </section>
 
+    <div class="modal fade" id="successModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-gif">
+            <img src="images/success.gif" class="img-fluid" />
+          </div>
+          <h1 class="auth-title">تم إنشاء الحساب بنجاح</h1>
+          <h6 class="auth-subtitle">يمكنك الأن الحجز من خلال الأكاديمية</h6>
+          <a href="logged.html" class="modal-btn main-btn"> الرئيسية </a>
+        </div>
+      </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
