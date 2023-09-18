@@ -96,7 +96,6 @@ $(document).ready(function () {
   });
 
   /************************************ Select ************************************/
-
   function formatState(state) {
     if (!state.id) {
       return state.text;
@@ -118,5 +117,38 @@ $(document).ready(function () {
     templateResult: formatState,
     templateSelection: formatState,
     minimumResultsForSearch: Infinity,
+  });
+
+  /************************************ Team Slider ************************************/
+  var teamSwiper = new Swiper(".team-slider .swiper", {
+    a11y: {
+      enabled: false,
+    },
+    autoplay: {
+      delay: 5000,
+    },
+    loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+    pagination: {
+      el: ".team-slider .swiper-pagination",
+      clickable: true,
+    },
   });
 });
