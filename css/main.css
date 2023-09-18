@@ -264,7 +264,8 @@ a:hover {
 }
 @media (max-width: 767px) {
   .page-title {
-    font-size: 50px;
+    font-size: 32px;
+    margin-bottom: 40px;
   }
 }
 
@@ -718,6 +719,9 @@ a:hover {
   font-weight: 400;
   line-height: 0.4375;
   display: block;
+}
+.blog-page .blog-item {
+  margin-bottom: 0;
 }
 
 .custom-nav-tabs {
@@ -1887,6 +1891,38 @@ body {
 }
 .team-member .socials a ~ a {
   margin-inline-start: 5px;
+}
+
+.blog-page {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 0 129px;
+}
+@media (max-width: 767px) {
+  .blog-page {
+    padding: 0px 0 70px;
+  }
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px 30px;
+}
+@media (max-width: 1199px) {
+  .blog-grid {
+    gap: 30px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
