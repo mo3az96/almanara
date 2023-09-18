@@ -94,4 +94,29 @@ $(document).ready(function () {
       input.attr("type", "password");
     }
   });
+
+  /************************************ Select ************************************/
+
+  function formatState(state) {
+    if (!state.id) {
+      return state.text;
+    }
+    var baseUrl = "images/flags";
+    var $state = $(
+      '<span class="country-item"><img src="' +
+        baseUrl +
+        "/" +
+        state.element.value.toLowerCase() +
+        '.svg" class="img-flag" /> ' +
+        state.text +
+        "</span>"
+    );
+    return $state;
+  }
+
+  $(".country-select").select2({
+    templateResult: formatState,
+    templateSelection: formatState,
+    minimumResultsForSearch: Infinity,
+  });
 });
