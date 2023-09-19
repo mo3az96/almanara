@@ -2608,6 +2608,289 @@ body {
   margin: auto;
 }
 
+/* order */
+.order-headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .order-headline {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .order-headline .headline-start {
+    width: 100%;
+  }
+}
+.order-headline .order-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .order-headline .order-head {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.order-headline .order-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+.order-headline .order-progress {
+  margin-inline-start: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 123px;
+  height: 38px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.order-headline .payment-method {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #575757;
+  margin-bottom: 20px;
+}
+.order-headline .order-rest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .order-headline .order-rest {
+    flex-direction: row;
+    justify-content: center;
+    text-align: start;
+  }
+}
+.order-headline .rest-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #575757;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .order-headline .rest-title {
+    margin: 0;
+    margin-inline-end: 10px;
+  }
+}
+.order-headline .rest-value {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.order-headline.inProgress .order-progress,
+.order-headline.inProgress .rest-value {
+  background-color: #e8f5e8;
+  color: #4eab4c;
+}
+.order-headline.finshed .order-progress,
+.order-headline.finshed .rest-value {
+  background-color: #f0f0f0;
+  color: #797979;
+}
+
+.order-blocks {
+  display: grid;
+  grid-template-columns: 20000fr 16299fr;
+  gap: 40px 31px;
+}
+@media (max-width: 991px) {
+  .order-blocks {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.order-blocks .teacher-info {
+  order: 1;
+}
+.order-blocks .time-info {
+  order: 2;
+}
+@media (max-width: 991px) {
+  .order-blocks .time-info {
+    order: 3;
+  }
+}
+.order-blocks .student-info {
+  order: 3;
+}
+@media (max-width: 991px) {
+  .order-blocks .student-info {
+    order: 2;
+  }
+}
+.order-blocks .price-info {
+  order: 4;
+}
+
+.block-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 20px;
+}
+
+.order-block {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-block.user-block {
+  padding: 0 25px;
+}
+.order-block.time-block {
+  padding: 0 27px;
+  position: relative;
+}
+.order-block.time-block:after {
+  content: "";
+  height: 1px;
+  border-top: 1px dashed #a3a3a3;
+  position: absolute;
+  top: 31.5px;
+  left: 30px;
+  right: 30px;
+}
+.order-block.price-block {
+  background: linear-gradient(180deg, #2a2929 0%, #c51d38 0.01%, #721524 100%);
+  padding: 0 33px;
+}
+.order-block .user-img {
+  width: 101px;
+  height: 101px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .order-block .user-img {
+    width: 75px;
+    height: 75px;
+  }
+}
+.order-block .user-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.order-block .user-text {
+  margin-inline-end: auto;
+  margin-inline-start: 30px;
+}
+@media (max-width: 767px) {
+  .order-block .user-text {
+    margin-inline-start: 15px;
+  }
+}
+.order-block .user-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0;
+}
+.order-block .user-info {
+  font-size: 18px;
+  color: #525252;
+  font-weight: 500;
+  display: block;
+  margin: 7px 0 0;
+}
+.order-block .user-tel {
+  direction: ltr;
+}
+html[dir=rtl] .order-block .user-tel {
+  text-align: right;
+}
+html[dir=ltr] .order-block .user-tel {
+  text-align: left;
+}
+.order-block .teacher-rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.order-block .teacher-rate .icon {
+  margin-bottom: 7px;
+}
+.order-block .teacher-rate .value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #dfc228;
+}
+.order-block .time {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7857;
+  position: relative;
+  z-index: 2;
+}
+.order-block .time .circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 15px;
+  background-color: #f6f6f6;
+}
+.order-block .time.start {
+  color: #5c9330;
+  align-items: flex-start;
+}
+.order-block .time.start .circle {
+  border: 1px dashed #a3a3a3;
+}
+.order-block .time.end {
+  align-items: flex-end;
+  color: #a11e1e;
+}
+.order-block .time.end .circle {
+  background-color: #a11e1e;
+}
+.order-block .price-text {
+  color: #fff;
+}
+.order-block .price-title {
+  font-size: 30px;
+  line-height: 0.5;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.order-block .price-value {
+  font-size: 26px;
+  line-height: 0.5;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
 footer {
   background: linear-gradient(257.44deg, #333333 0%, #1d1b1b 100.77%);
   position: relative;
