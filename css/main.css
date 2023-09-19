@@ -111,6 +111,27 @@ a:hover {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "en";
+  src: url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "en";
+  src: url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "en";
+  src: url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 .overflow {
   overflow: hidden !important;
 }
@@ -262,6 +283,8 @@ a:hover {
   text-align: center;
   margin: 0 0 70px;
   padding: 0 10px;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 767px) {
   .page-title {
@@ -892,6 +915,7 @@ a:hover {
   height: 52px;
   border-radius: 26px;
   border: 1px solid #cfcfcf;
+  background-color: transparent;
   color: #333;
   font-size: 16px;
   font-weight: 600;
@@ -932,6 +956,12 @@ html[dir=ltr] .custom-input::placeholder {
 }
 .custom-input:focus ~ .icon {
   stroke: #C51D38;
+}
+.custom-input:is(textarea) {
+  padding: 20px 15px;
+  border-radius: 10px;
+  height: 210px;
+  resize: none;
 }
 
 .input-error {
@@ -987,6 +1017,7 @@ html[dir=ltr] .custom-input::placeholder {
   height: 52px;
   border-radius: 26px;
   border: 1px solid #cfcfcf;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1376,6 +1407,11 @@ body {
 .packages-section .pattern.top {
   top: 0;
   left: 0;
+}
+@media (max-width: 767px) {
+  .packages-section .pattern.top {
+    display: none;
+  }
 }
 .packages-section .pattern.bpttom {
   bottom: 0;
@@ -2028,6 +2064,11 @@ body {
   top: 0;
   left: 0;
 }
+@media (max-width: 767px) {
+  .packages-page .pattern.top {
+    display: none;
+  }
+}
 .packages-page .pattern.bpttom {
   bottom: 0;
   right: 0;
@@ -2077,6 +2118,253 @@ body {
 }
 .inner-packges .package-item.best .package-feats p {
   color: #fff;
+}
+
+.contact-page {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+.contact-page .pattern {
+  position: absolute;
+}
+.contact-page .pattern.top {
+  top: 0;
+  left: 0;
+}
+@media (max-width: 767px) {
+  .contact-page .pattern.top {
+    display: none;
+  }
+}
+.contact-page .pattern.bpttom {
+  bottom: 0;
+  right: 0;
+}
+
+.contact-section {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 90px;
+}
+@media (max-width: 991px) {
+  .contact-section {
+    padding: 0 0 70px;
+  }
+}
+
+.contact-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 40px;
+}
+@media (max-width: 1199px) {
+  .contact-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .contact-subtitle {
+    text-align: center;
+  }
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 991px) {
+  .contact-content {
+    display: block;
+  }
+}
+
+.contact-form {
+  width: 670px;
+  flex-shrink: 0;
+  background: linear-gradient(211.4deg, #f7f7f7 7.38%, #f5f5f5 100%);
+  border-radius: 20px;
+  padding: 50px 28px 67px;
+}
+@media (max-width: 1199px) {
+  .contact-form {
+    width: 60%;
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .contact-form {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.contact-submit {
+  width: 100%;
+  max-width: 338px;
+  margin: auto;
+}
+
+.contact-methods {
+  padding: 40px;
+  width: 100%;
+  background-color: #333;
+  border-end-end-radius: 20px;
+  border-start-end-radius: 20px;
+}
+.contact-methods .contact-subtitle {
+  color: #fff;
+}
+@media (max-width: 1199px) {
+  .contact-methods {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .contact-methods {
+    border-radius: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-methods {
+    padding: 25px 10px;
+  }
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "en";
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+.contact-method span {
+  direction: ltr;
+}
+.contact-method ~ .contact-method {
+  margin-top: 32px;
+}
+@media (max-width: 1199px) {
+  .contact-method ~ .contact-method {
+    margin-top: 20px;
+  }
+}
+.contact-method .method-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #434343;
+  margin-inline-end: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+@media (max-width: 1199px) {
+  .contact-method .method-icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .contact-method .method-icon img {
+    max-height: 100%;
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (max-width: 767px) {
+  .contact-method .method-icon {
+    margin-inline-end: 5px;
+    background-color: transparent;
+    width: 25px;
+    padding-inline: 0;
+  }
+}
+.contact-method:hover {
+  color: #C51D38;
+}
+.contact-method:hover .method-icon {
+  background-color: #C51D38;
+}
+@media (max-width: 991px) {
+  .contact-method {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 767px) {
+  .contact-method {
+    font-size: 14px;
+    margin-inline: 0;
+  }
+}
+
+.jobs-section {
+  background-color: #f5f5f5;
+  padding: 70px 0 77px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .jobs-section {
+    padding: 40px 0 60px;
+  }
+}
+.jobs-section .section-head {
+  margin-bottom: 110px;
+}
+@media (max-width: 991px) {
+  .jobs-section .section-head {
+    margin-bottom: 40px;
+  }
+}
+.jobs-section .section-title {
+  color: #333;
+}
+
+.jobs-form {
+  width: 613px;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1199px) {
+  .jobs-form {
+    width: 50%;
+  }
+}
+@media (max-width: 991px) {
+  .jobs-form {
+    width: 100%;
+  }
+}
+
+.contact-img {
+  position: absolute;
+  bottom: 0;
+  inset-inline-end: 0;
+}
+@media (max-width: 1199px) {
+  .contact-img {
+    inset-inline-start: calc(50% + 30px);
+    inset-inline-end: unset;
+  }
+}
+@media (max-width: 991px) {
+  .contact-img {
+    display: none;
+  }
 }
 
 footer {
