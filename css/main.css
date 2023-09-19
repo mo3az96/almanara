@@ -1103,6 +1103,18 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   border-radius: 4px;
 }
 
+.form-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+@media (max-width: 991px) {
+  .form-line {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -2365,6 +2377,100 @@ body {
   .contact-img {
     display: none;
   }
+}
+
+.account-page {
+  background-color: #fff;
+}
+
+.account-section {
+  padding: 0 0 95px;
+}
+@media (max-width: 991px) {
+  .account-section {
+    padding: 0 0 70px;
+  }
+}
+
+.account-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+@media (max-width: 1199px) {
+  .account-content {
+    display: block;
+  }
+  .account-content aside {
+    display: none;
+  }
+}
+
+.account-side {
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 30px 0 0;
+}
+.account-side li {
+  padding: 0 12px;
+}
+.account-side li ~ li {
+  margin-top: 24px;
+}
+.account-side a {
+  height: 44px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  fill: #000;
+  stroke: #000;
+  padding: 0 25px;
+  transition: 0.3s ease-in-out;
+  transition-property: stroke, fill, color;
+}
+.account-side a .side-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 25px;
+  margin-inline-end: 7px;
+}
+.account-side a:hover {
+  color: #C51D38;
+  fill: #C51D38;
+  stroke: #C51D38;
+}
+.account-side a.active {
+  color: #fff;
+  fill: #fff;
+  stroke: #fff;
+  font-weight: 700;
+  background-color: #C51D38;
+  box-shadow: 0px 4px 7px 0px rgba(197, 29, 56, 0.1803921569);
+}
+.account-side li:last-of-type {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #dcdcdc;
+}
+.account-side li:last-of-type a {
+  justify-content: center;
+  color: #C51D38;
+  height: auto;
+}
+
+.profile-submit {
+  width: 100%;
+  max-width: 338px;
+  margin: auto;
 }
 
 footer {
