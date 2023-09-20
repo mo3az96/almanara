@@ -118,6 +118,10 @@ $(document).ready(function () {
     templateSelection: formatState,
     minimumResultsForSearch: Infinity,
   });
+  $(".custom-select").select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: "custom-select2",
+  });
 
   /************************************ Team Slider ************************************/
   var teamSwiper = new Swiper(".team-slider .swiper", {
