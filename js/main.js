@@ -155,4 +155,14 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  /* form steps */
+  $(".booking-steps-btn").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(".formpaginate .next").trigger("click");
+    if ($(".formpaginate .next").css("display") == "none") {
+      $(".booking-steps-btn").hide();
+    }
+  });
 });
