@@ -1381,6 +1381,7 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 .user-cont .user-btn .user-name {
   margin-inline-start: 7px;
   margin-inline-end: 13px;
+  white-space: nowrap;
 }
 @media (max-width: 991px) {
   .user-cont .user-btn {
