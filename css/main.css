@@ -928,7 +928,8 @@ a:hover {
   position: absolute;
   top: 0;
   inset-inline-start: 29px;
-  transition: stroke 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transition-property: stroke, fill;
 }
 
 .custom-input {
@@ -969,6 +970,7 @@ html[dir=ltr] .custom-input::placeholder {
   border-color: #C51D38;
 }
 .custom-input:focus ~ .icon {
+  fill: #C51D38;
   stroke: #C51D38;
 }
 .custom-input:is(textarea) {
@@ -2497,9 +2499,8 @@ body {
 @media (max-width: 767px) {
   .contact-method .method-icon {
     margin-inline-end: 5px;
-    background-color: transparent;
-    width: 25px;
-    padding-inline: 0;
+    width: 35px;
+    height: 35px;
   }
 }
 .contact-method:hover {
